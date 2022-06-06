@@ -32,6 +32,10 @@ requirements:
     - tzlocal >=1.5.1
     - wrapt
     - xlrd
+    - boto3
+    - numpy
+    - mypy-boto3-s3
+    - botocore
 
 test:
   imports:
