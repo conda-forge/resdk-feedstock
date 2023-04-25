@@ -16,27 +16,25 @@ build:
 
 requirements:
   host:
+    - python >=3.7,<3.11
+    - setuptools >=64.0.0
+    - setuptools-scm >=6.4.0
     - pip
-    - python >=3.6
-    - setuptools-scm
   run:
+    - python >=3.7,<3.11
     - aiohttp
-    - chardet <=4.0,>=2.0
-    - openpyxl
-    - pandas >=1.0.0
-    - python >=3.6
-    - pytz >=2018.4
     - requests >=2.6.0
     - slumber >=0.7.1
-    - tqdm
-    - tzlocal >=1.5.1
     - wrapt
+    - pytz >=2018.4
+    - tzlocal >=1.5.1
+    - pandas >=1.0.0
+    - tqdm
+    - openpyxl
     - xlrd
-    - boto3
-    - numpy
-    - mypy-boto3-s3
-    - botocore
-    - boto3-stubs
+    - boto3 >=1.24,<2.dev0
+    - boto3-stubs >=1.24,<2.dev0
+    - importlib-metadata
 
 test:
   imports:
