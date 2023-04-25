@@ -1,5 +1,5 @@
 {% set name = "resdk" %}
-{% set version = "16.0.0" %}
+{% set version = "17.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/resdk-{{ version }}.tar.gz
-  sha256: 6424cc0c7584f95f6738cbccc98e83902377438881d435776a7b19a6ea458f7a
+  sha256: 83d09b4845765c9e73ff467ce02de1dd1d304f068fd7fea97f1005dfed0ccc1b
 
 build:
   noarch: python
@@ -16,27 +16,26 @@ build:
 
 requirements:
   host:
+    - python >=3.7,<3.11
+    - setuptools >=64.0.0
+    - setuptools-scm >=6.4.0
     - pip
-    - python >=3.6
-    - setuptools-scm
   run:
+    - python >=3.7,<3.11
     - aiohttp
-    - chardet <=4.0,>=2.0
-    - openpyxl
-    - pandas >=1.0.0
-    - python >=3.6
-    - pytz >=2018.4
     - requests >=2.6.0
     - slumber >=0.7.1
-    - tqdm
-    - tzlocal >=1.5.1
     - wrapt
+    - pytz >=2018.4
+    - tzlocal >=1.5.1
+    - pandas >=1.0.0
+    - tqdm
+    - openpyxl
     - xlrd
-    - boto3
-    - numpy
+    - boto3 >=1.24,<2.dev0
+    - boto3-stubs >=1.24,<2.dev0
+    - importlib-metadata
     - mypy-boto3-s3
-    - botocore
-    - boto3-stubs
 
 test:
   imports:
