@@ -35,7 +35,7 @@ requirements:
     - boto3 >=1.24,<2.dev0
     - boto3-stubs >=1.24,<2.dev0
     - importlib-metadata
-    - mypy-boto3-s3
+   # - mypy-boto3-s3
 
 test:
   imports:
