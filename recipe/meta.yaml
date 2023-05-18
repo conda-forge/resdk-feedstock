@@ -1,5 +1,5 @@
 {% set name = "resdk" %}
-{% set version = "17.0.0" %}
+{% set version = "18.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/resdk-{{ version }}.tar.gz
-  sha256: 83d09b4845765c9e73ff467ce02de1dd1d304f068fd7fea97f1005dfed0ccc1b
+  sha256: fc1295fcf5488054e89eca66dac212e4c53d82bde2aad5143dd5a30dff9cf047
 
 build:
   noarch: python
