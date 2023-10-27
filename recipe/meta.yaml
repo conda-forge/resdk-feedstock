@@ -1,5 +1,5 @@
 {% set name = "resdk" %}
-{% set version = "19.0.1" %}
+{% set version = "20.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/resdk-{{ version }}.tar.gz
-  sha256: b4bdae5f6694c79deab077054ff709d63d30d64d65a3cc27fc7b1302b7902803
+  sha256: 56728eac8971c7f4c7eca2573a4783bb75373a083b2c1e0a8066e5267a7328df
 
 build:
   noarch: python
@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7,<3.11
+    - python >=3.8,<3.12
     - setuptools >=64.0.0
     - setuptools-scm >=6.4.0
     - pip
   run:
-    - python >=3.7,<3.11
-    - aiohttp
+    - python >=3.8,<3.12
+    - aiohttp >=3.8.5,<3.9.dev0
     - requests >=2.6.0
     - slumber >=0.7.1
     - wrapt
