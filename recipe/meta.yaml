@@ -35,7 +35,6 @@ requirements:
     - xlrd
     - boto3 >=1.24,<2.dev0
     - boto3-stubs >=1.24,<2.dev0
-    - importlib-metadata  # [py<38]
     - packaging
     
 test:
