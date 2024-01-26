@@ -36,7 +36,11 @@ requirements:
     - boto3-stubs >=1.24,<2.dev0
     - importlib-metadata
     - mypy-boto3-s3 #not listed in toml file, but required at testing
+    - packaging
+    - botocore
+    - numpy
 
+    
 test:
   imports:
     - resdk
