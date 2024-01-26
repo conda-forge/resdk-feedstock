@@ -39,7 +39,7 @@ requirements:
     - packaging
     - botocore
     - numpy
-
+    - urllib3 >=2
     
 test:
   imports:
