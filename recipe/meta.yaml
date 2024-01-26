@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.11
     - setuptools >=64.0.0
     - setuptools-scm >=6.4.0
     - pip
   run:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.11
     - aiohttp >=3.8.5,<3.9.dev0
     - requests >=2.6.0
     - slumber >=0.7.1
