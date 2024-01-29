@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python =3.9 #Just for the building part
     - setuptools >=64.0.0
     - setuptools-scm >=6.4.0
     - pip
