@@ -20,13 +20,7 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
-    <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15187&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/resdk-feedstock?branchName=main">
-      </a>
-    </td>
-  </tr>
+<table>
 </table>
 
 Current release info
