@@ -10,7 +10,8 @@ source:
   sha256: 4a8348dfd6776a9ddee42effefd1c060be7940ec1b33f3b867a231d476f0459c
 
 build:
-  skip: true # [py<312] #Is pure python but currently facing issues with the urlib/botocore dependancies.
+  skip: true # [py<312]
+  #Is pure python but currently facing issues with the urlib/botocore dependancies.
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
