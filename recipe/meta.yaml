@@ -39,7 +39,7 @@ requirements:
     - importlib-metadata
     - mypy-boto3-s3 #not listed in toml file, but required at testing
     - packaging
-    - urllib  >=2  # [py>=310]
+    - urllib3  >=2  # [py>=310]
     - urllib3 >=1.25.4,<1.27  # [py<310]
 test:
   imports:
