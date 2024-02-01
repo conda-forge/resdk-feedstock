@@ -10,21 +10,21 @@ source:
   sha256: 4a8348dfd6776a9ddee42effefd1c060be7940ec1b33f3b867a231d476f0459c
 
 build:
-  skip: true  # [py>=312]
-  #Is pure python but currently facing issues with the urlib/botocore dependancies.
+  skip: true  # [py>=312 or py2k]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python
+    - python >=3.8,<3.12
     - setuptools >=64.0.0
     - setuptools-scm >=6.4.0
     - pip
   run:
-    - python
+    - python >=3.8,<3.12
     - aiohttp >=3.8.5,<3.9.dev0
     - requests >=2.6.0
+    - urllib3 >=2  # [py>=310]
     - slumber >=0.7.1
     - wrapt
     - pytz >=2018.4
@@ -35,12 +35,8 @@ requirements:
     - xlrd
     - boto3 >=1.24,<2.dev0
     - boto3-stubs >=1.24,<2.dev0
-    - importlib-metadata
-    - mypy-boto3-s3 #not listed in toml file, but required at testing
+    - importlib-metadata  # [py<38]
     - packaging
-    - urllib3  >=2  # [py>=310]
-    - urllib3 >=1.25.4,<1.27  # [py<310]
-    - botocore
 test:
   imports:
     - resdk
