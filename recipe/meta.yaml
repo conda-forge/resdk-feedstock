@@ -36,7 +36,7 @@ requirements:
     - boto3 >=1.24,<2.dev0  # [py<310]
     - boto3 >=1.34,<2.dev02  # [py>=310]
     - boto3-stubs >=1.24,<2.dev0  # [py<310]
-    - boto3-stubs >=1.34,<2.dev0  # [py>=310]
+    - boto3-stubs >=1.24,<2.dev0  # [py>=310]
     - botocore >=1.34,<2.dev0  # [py>=310]
       #relies on https://github.com/conda-forge/botocore-feedstock/blob/arch-specific/recipe/meta.yaml
     - packaging
