@@ -1,5 +1,5 @@
 {% set name = "resdk" %}
-{% set version = "21.1.0" %}
+{% set version = "21.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/resdk-{{ version }}.tar.gz
-  sha256: 96d5bf0721eee006360f0b1116310a509028160aded47a82e1ac1992f5fe6105
+  sha256: bcf09bc9e2d3c0d306a478ee02e68241f41636193b41c088a6ff77ab5c766d3d
 
 build:
   skip: true  # [py>=313]
@@ -15,7 +15,7 @@ build:
   # aiohttp-feedstock/recipe/meta.yaml
 
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
