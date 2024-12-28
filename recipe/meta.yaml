@@ -41,7 +41,7 @@ requirements:
        #- botocore >=1.34,<2.dev0   [py>=310]
       #relies on https://github.com/conda-forge/botocore-feedstock/blob/arch-specific/recipe/meta.yaml
     - packaging
-         - mypy-boto3-s3 #not listed in toml file, but required at testing
+    - mypy-boto3-s3 #not listed in toml file, but required at testing
 test:
   imports:
     - resdk
