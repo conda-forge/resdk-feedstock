@@ -25,7 +25,8 @@ requirements:
     - pip
   run:
     - python
-    - aiohttp >=3.9.3,<3.10.dev0
+    - aiohttp >=3.9.3,<3.10.dev0 # [py<313]
+    - aiohttp >=3.9.3 # [py>=313]
     - requests >=2.6.0
     - urllib3 >=2  # [py>=310]
     - slumber >=0.7.1
