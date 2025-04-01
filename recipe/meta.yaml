@@ -1,5 +1,5 @@
 {% set name = "resdk" %}
-{% set version = "21.2.1" %}
+{% set version = "22.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/resdk-{{ version }}.tar.gz
-  sha256: 5b231e655674f0362e72846bbf66e36afe82f595acbca32dbc77656517c21f2e
+  sha256: 3fc0ea3f71c02621064b39bada380101f5810c0bf00e1d6df618ff1d8fab57e4
 
 build:
   skip: true  # [py>=313]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 3
+  number: 0
 
 requirements:
   build:
