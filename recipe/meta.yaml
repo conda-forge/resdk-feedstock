@@ -1,5 +1,5 @@
 {% set name = "resdk" %}
-{% set version = "22.0.0" %}
+{% set version = "22.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/resdk-{{ version }}.tar.gz
-  sha256: 3fc0ea3f71c02621064b39bada380101f5810c0bf00e1d6df618ff1d8fab57e4
+  sha256: d8fa9f051b61e7d262cc11654f78a26e3b5e8f9677fbcea556bee6a74708a5a8
 
 build:
-  skip: true  # [py>=313]
+  skip: true  # [py>=314]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -25,7 +25,7 @@ requirements:
     - pip
   run:
     - python
-    - aiohttp >=3.9.3,<3.10.dev0 #not avalaible for py313 
+    - aiohttp >=3.9.3
     - requests >=2.6.0
     - urllib3 >=2  # [py>=310]
     - slumber >=0.7.1
