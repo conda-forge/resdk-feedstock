@@ -14,26 +14,28 @@ source:
 
 build:
   number: 2
-  skip: match(python, ">=3.14")
+  #skip: match(python, ">=3.14")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  noarch: python
 
 requirements:
-  build:
-    - if: build_platform != target_platform
-      then:
-        - python
-        - cross-python_${{ target_platform }}
+   #build:
+    #- if: build_platform != target_platform
+      #then:
+        #- python
+        #- cross-python_${{ target_platform }}
   host:
-    - python
+    - python ${{ python_min }}
     - setuptools >=64.0.0
     - setuptools-scm >=6.4.0
     - pip
   run:
-    - python
+    - python >=${{ python_min }},<3.14
     - aiohttp >=3.9.3
     - requests >=2.6.0
-    - if: match(python, ">=3.10")
-      then: urllib3 >=2
+    #- if: match(python, ">=3.10")
+      #then: urllib3 >=2
+    - urllib3 >=2
     - slumber >=0.7.1
     - wrapt
     - pytz >=2018.4
@@ -54,6 +56,7 @@ tests:
   - requirements:
       run:
         - pip
+        - python ${{ python_min }}
     script:
       - pip check
 
