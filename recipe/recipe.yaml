@@ -13,7 +13,7 @@ source:
   sha256: cbb0e2d2cca5e69093e3af5eac21c296b08ccee74619820a5aeb89c9553cd010
 
 build:
-  number: 2
+  number: 3
   #skip: match(python, ">=3.14")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
