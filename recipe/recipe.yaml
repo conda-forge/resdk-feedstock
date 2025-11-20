@@ -32,13 +32,13 @@ requirements:
   run:
     - python >=${{ python_min }},<3.14
     - aiohttp >=3.9.3
-    - requests >=2.6.0
+    - requests
     #- if: match(python, ">=3.10")
       #then: urllib3 >=2
     - urllib3 >=2
     - slumber >=0.7.1
     - wrapt
-    - pytz >=2018.4
+    - pytz
     - tzlocal
     - pandas
     - tqdm
