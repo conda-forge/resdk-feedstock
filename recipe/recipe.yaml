@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: resdk
-  version: "22.2.1"
+  version: "22.2.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/resdk-${{ version }}.tar.gz
-  sha256: 9a71ee97934632622c421d8abd44ec67483c58af849fb3c8c04aec051766052c
+  sha256: 9ec1662f2d498601a5b3ea82ea23a6d0b912211223dfd969b6da24d9536eac16
 
 build:
   number: 0
@@ -26,12 +26,12 @@ requirements:
         #- cross-python_${{ target_platform }}
   host:
     - python ${{ python_min }}*
-    - setuptools >=64.0.0
-    - setuptools-scm >=6.4.0
+    - setuptools >=80.9.0
+    - setuptools-scm >=9.2.2
     - pip
   run:
-    - python >=${{ python_min }},<3.14
-    - aiohttp >=3.9.3
+    - python >=${{ python_min }},<3.15
+    - aiohttp >=3.13.2
     - requests
     #- if: match(python, ">=3.10")
       #then: urllib3 >=2
@@ -40,7 +40,7 @@ requirements:
     - wrapt
     - pytz
     - tzlocal
-    - pandas
+    - pandas <3.0.0
     - tqdm
     - openpyxl
     - xlrd
