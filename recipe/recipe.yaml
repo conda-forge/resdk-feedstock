@@ -26,12 +26,12 @@ requirements:
         #- cross-python_${{ target_platform }}
   host:
     - python ${{ python_min }}*
-    - setuptools >=64.0.0
-    - setuptools-scm >=6.4.0
+    - setuptools >=80.9.0
+    - setuptools-scm >=9.2.2
     - pip
   run:
-    - python >=${{ python_min }},<3.14
-    - aiohttp >=3.9.3
+    - python >=${{ python_min }},<3.15
+    - aiohttp >=3.13.2
     - requests
     #- if: match(python, ">=3.10")
       #then: urllib3 >=2
@@ -40,7 +40,7 @@ requirements:
     - wrapt
     - pytz
     - tzlocal
-    - pandas
+    - pandas <3.0.0
     - tqdm
     - openpyxl
     - xlrd
