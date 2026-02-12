@@ -13,8 +13,8 @@ source:
   sha256: 9ec1662f2d498601a5b3ea82ea23a6d0b912211223dfd969b6da24d9536eac16
 
 build:
-  number: 0
-  #skip: match(python, ">=3.14")
+  number: 1
+  #skip: match(python, ">=3.15")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
@@ -53,12 +53,8 @@ tests:
   - python:
       imports:
         - resdk
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}*
-    script:
-      - pip check
+      pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
   summary: Resolwe SDK for Python
