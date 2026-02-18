@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: resdk
-  version: "22.2.2"
+  version: "22.2.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/resdk-${{ version }}.tar.gz
-  sha256: 9ec1662f2d498601a5b3ea82ea23a6d0b912211223dfd969b6da24d9536eac16
+  sha256: 6f733082e1cfe7612f75b4bb23185eeff75877144ed880227fe22688318ae387
 
 build:
-  number: 1
+  number: 0
   #skip: match(python, ">=3.15")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
@@ -47,6 +47,7 @@ requirements:
     - boto3
     - boto3-stubs
     - packaging
+    - botocore
     - mypy-boto3-s3  #not listed in toml file, but required at testing
 
 tests:
