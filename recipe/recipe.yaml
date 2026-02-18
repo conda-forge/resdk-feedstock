@@ -47,7 +47,7 @@ requirements:
     - boto3
     - boto3-stubs
     - packaging
-    - mypy-boto3-s3  #not listed in toml file, but required at testing
+   # - mypy-boto3-s3  #not listed in toml file, but required at testing
 
 tests:
   - python:
